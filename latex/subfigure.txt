@@ -1,0 +1,12 @@
+\begin{figure}[H]
+%\centering
+\subfigure[Small Box with a Long Caption]{
+\label{fig:subfig:a} %% label for first subfigure
+\includegraphics[width=0.5\textwidth]{images/UnTTypeNameHV}}
+\hspace{0.1in}
+\subfigure[Big Box]{
+\label{fig:subfig:b} %% label for second subfigure
+\includegraphics[width=0.5\textwidth]{images/BinTTypeNameHV}}
+\caption{Two Subfigures}
+\label{fig:subfig} %% label for entire figure
+\end{figure}

@@ -1,0 +1,9 @@
+其中base是排序的一个集合数组，num是这个数组元素的个数，width是一个元素的大小，comp是一个比较函数。
+比如：对一个长为1000的数组进行排序时，int a[1000]; 那么base应为a，num应为 1000，width应为 sizeof(int)，comp函数随自己的命名。
+qsort(a,1000,sizeof(int),comp);
+其中comp函数应写为：
+int comp(const void*a,const void*b)
+{
+return *(int*)a-*(int*)b;
+}
+上面是由小到大排序，return *(int *)b - *(int *)a; 为由大到小排序。

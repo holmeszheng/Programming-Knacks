@@ -1,0 +1,3 @@
+private 成员只能被类的成员函数访问（类的对象或指针的访问也算外部）
+public 成员可以被类的成员函数和外部访问，但是是否能够脱离object 要看是否是static.
+protected 成员类似于private成员，只能在类中使用。

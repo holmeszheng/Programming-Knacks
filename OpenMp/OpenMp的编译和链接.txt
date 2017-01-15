@@ -1,0 +1,7 @@
+﻿openmp编译： 
+
+一步的话只需要 gcc -fopenmp test.c 或 g++ -fopenmp test.cpp
+
+编译链接分开的话：先编译 gcc -fopenmp -c test.c
+                               
+再链接 gcc -o test test.o -lgomp -lpthread

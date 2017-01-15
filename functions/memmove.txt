@@ -1,0 +1,3 @@
+// Return the image that is found
+  
+memmove(found_image, population[0].image, width*height*sizeof(RGB));

@@ -1,0 +1,1 @@
+	mpicc可以编译和链接普通的不带mpi的c文件，当工程中有带mpi的c文件时，也有不带mpi的c文件时，可以用gcc或者mpicc编译不带mpi的c文件，带mpi的c文件一定用mpicc编译，最后所有的objects一定用mpicc链接。

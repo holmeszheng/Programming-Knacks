@@ -1,0 +1,2 @@
+terminal 中alias用于查看当前用户下的alias
+在.bashrc中中设置当前用户的alias
