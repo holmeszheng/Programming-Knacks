@@ -57,7 +57,38 @@ public:
     static int k;
 };
 
-int Test<int>::k = 0; （因为没有template关键字，所以相当于普通情况下的定义，需要放在.cpp中，如果放在.h中则相当于静态外部变量重复定义）
+int Test<int>::k = 0;  （因为没有template关键字，所以相当于普通情况下的定义，需要放在.cpp中，如果放在.h中则相当于静态外部变量重复定义）
+			(members of an explicitly specialized class are defined without a template header)
+(具体化的模板类的静态成员变量的定义在类外，声明在内类，定义时不能加template 的header）
+所以：
+template<>
+int Test<int>::k = 0；是错误的。
+但是：
+部分具体化的类模板的静态成员变量还是要在类外带template来定义的
+例如：
+template <typename T, int N>
+class Test
+{
+public:
+    static T m_a;
+};
+template<typename T, int N>
+T Test<T, N>::m_a = 1;
+
+template <int N>
+class Test<double, N>
+{
+public:
+    static double m_a;
+};
+template <int N> 
+double Test<double, N>::m_a = 22.5;
+
+
+
+
+
+
 
 int main()
 {

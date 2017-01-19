@@ -1,0 +1,19 @@
+tab 缩进
+ctrl tab 取消缩进
+home 光标行头
+end 光标行尾
+page up 光标页头
+page down 光标页尾
+上下左右 光标向上下左右移动一个位置
+shift 在光标移动的时候组合使用shift，选中两次光标移动间的距离
+ctrl shift c 注释
+ctrl shift x 取消注释
+ctrl f 查找
+ctrl r 替换
+F3 下一个查找对象
+shift F3 前一个查找对象
+F9 编译并运行
+ctrl s 保存
+alt 选中菜单栏
+alt 字母 直接组合菜单栏
+alt 左右 到当前打开的左右文件
