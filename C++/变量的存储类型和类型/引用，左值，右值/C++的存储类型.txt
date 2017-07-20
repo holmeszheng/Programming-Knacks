@@ -1,0 +1,16 @@
+3 types of rvalue:
+xvalue(function returned &&)
+literal value
+temporary(function returned object, conversion, expression)
+
+3 types of lvalue:
+local auto
+static: static external, static internal, static local, static member data and function
+heap(new and delete)
+
+
+C++ variable type:
+object: string a;
+pointer: string *a;
+reference: string &a;
+在函数传参和返回时同理。

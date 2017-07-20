@@ -1,0 +1,42 @@
+每个类名的全称是包名加类名
+同一个包中的类都是互相import了的，不用专门import。也用于了package的default access。
+package hello_world;
+public class Main{}
+
+则，该类的全名为hello_world.Main.class
+该类的地址为hello_world/Main.class
+需要在hello_world的上层目录下: java hello_world/Main
+
+若，该类没有package，则全名就是Main.class
+
+
+java源程序中package设置不当会导致无法运行class文件的错误
+1. 在java源文件开头没有包声明语句 package your_package; 
+D:\jtest> javac J_Hello.java
+
+D:\jtest> java J_Hello
+Hello, the Java world!
+
+2. 在java源文件开头有包声明语句 package your_package; 
+D:\jtest>javac J_Hello1.java
+
+D:\jtest>java J_Hello1
+Error: Could not find or load main class J_Hello1
+
+错误原因：
+编译含有包声明语句的java源程序文件的格式是：
+    javac -d your_path your_class.java
+此命令能在 your_path/your_package/ 下生成 your_class.class。
+
+上面的命令中没有-d选项，javac会在当前目录下生成J_Hello1.class（没有报错）。
+但是执行java命令，会因为找不到class而出错。
+
+解决方法：
+1. 在当前目录下手工创建com/mypkg/test目录，将移动J_Hello1.class到该目录下。
+2. 用 javac -d . J_Hello1.java 编译，将直接生成./com/mypkg/test/J_Hello1.class。 
+D:\jtest>javac -d . J_Hello1.java
+
+
+D:\jtest>Java com.mypkg.test.J_Hello1
+
+Hello, the Java world!

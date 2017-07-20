@@ -1,8 +1,0 @@
-unsigned char a=255;
-    unsigned char b=254;
-    int c=a+b;
-    printf("%d\n",c);
-    return 0;
-
-a+b的时候，相当与（int）a+（int）b
-a+b的结果是507

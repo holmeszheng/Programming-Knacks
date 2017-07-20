@@ -1,0 +1,10 @@
+C++里，变量有存储类型和类型之分
+存储类型有：左值（local auto, static(internal static, external static, local static, static variable and function), heap),右值(xvalue, literal, temporary(function returned object, conversion, expression)
+类型有：object, pointer, reference
+所以一个变量到底是什么，看声明部分：
+string a 就是object(pass by value)
+string *a 就是pointer(pass by value)
+string &a 就是reference(pass by reference)
+
+在function 传参和传回来时与声明没有区别。
+在exception handle时， try中throw exception进的是static memory，程序结束才清理掉。catch从static memory中抓。
